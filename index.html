@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mohabbat 💖</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffb6c1, #dda0dd, #e066ff, #ff1493);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .heart {
+      font-size: 40px;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .msg-box {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: white;
+      border: none;
+      color: #ff1493;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart">💗💜💖</div>
+  <h1>Hi Jaanu 💌</h1>
+  <p>Click below to get a special love message from me 💕</p>
+  <div class="msg-box" id="loveMsg">Your love message will appear here...</div>
+  <button onclick="generateMessage()">Get Love Message</button>
+
+  <script>
+    const messages = [
+      "You make my heart smile every single day ❤️",
+      "I’m lucky to call you mine 💘",
+      "You are my peace in chaos 🫶",
+      "I love you more than words can ever say 💞",
+      "Every moment with you is a blessing 💗",
+      "You are my today and all of my tomorrows 💓",
+      "My heart beats only for you 💟"
+    ];
+    function generateMessage() {
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById('loveMsg').innerText = msg;
+    }
+  </script>
+</body>
+</html>
